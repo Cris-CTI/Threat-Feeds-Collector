@@ -8,7 +8,7 @@ Educational project that normalizes and stores IoCs (IPs, domains, hashes) in CS
 - Updates data/feeds.csv with historical records.
 - Creates a preview dashboards/preview.png with basic statistics.
 
-## Uso rápido
+## Quick start
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
