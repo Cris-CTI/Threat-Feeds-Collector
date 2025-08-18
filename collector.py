@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
-"""Normaliza IoCs desde data/seed_iocs.txt y actualiza data/feeds.csv."""
+"""Normalizes IoCs from data/seed_iocs.txt and updates data/feeds.csv."""
 from datetime import date
 import csv
 from pathlib import Path
 
-SEVERITY_MAP = {"ip":"medium","domain":"high","url":"high","sha256":"medium"}
+SEVERITY_MAP = {"ip": "medium", "domain": "high", "url": "high", "sha256": "medium"}
 CONFIDENCE_DEFAULT = 70
 
 root = Path(__file__).resolve().parent
 seed_path = root / "data" / "seed_iocs.txt"
-csv_path  = root / "data" / "feeds.csv"
+csv_path = root / "data" / "feeds.csv"
 
 def parse_seed_line(line: str):
     parts = [p.strip() for p in line.split(",")]
     if len(parts) < 3:
         return None
     ioc_type, value, source = parts[:3]
-    # Sanea valores simples
+    # Sanitize simple values
     value = value.replace("[.]", ".")
     return {
         "date": date.today().isoformat(),
@@ -61,4 +61,4 @@ if __name__ == "__main__":
 
     updated = existing + new_rows
     save_all(csv_path, updated)
-    print(f"Añadidas {len(new_rows)} filas nuevas. Total: {len(updated)} -> {csv_path}")
+    print(f"Added {len(new_rows)} new rows. Total: {len(updated)} -> {csv_path}")
