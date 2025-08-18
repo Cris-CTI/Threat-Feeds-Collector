@@ -1,23 +1,23 @@
-# 🌐 Threat Intel Feeds Collector
+# Threat Intel Feeds Collector
 
-Proyecto educativo que **normaliza y almacena IoCs** (IPs, dominios, hashes) en CSV para su análisis y visualización.
+Educational project that normalizes and stores IoCs (IPs, domains, hashes) in CSV format for analysis and visualization.
 
-## ⚙️ ¿Qué hace?
-- Carga IoCs desde `data/seed_iocs.txt` (ficticios).
-- Normaliza y añade metadatos básicos (fecha, severidad, confianza).
-- Actualiza `data/feeds.csv` con el histórico.
-- Crea una vista previa `dashboards/preview.png` con estadísticas básicas.
+## What it does?
+- Loads IoCs from data/seed_iocs.txt (sample/fake data).
+- Normalizes them and adds basic metadata (date, severity, confidence).
+- Updates data/feeds.csv with historical records.
+- Creates a preview dashboards/preview.png with basic statistics.
 
-## ▶️ Uso rápido
+## Uso rápido
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-python collector.py          # genera/actualiza data/feeds.csv
-python dashboards/preview.py # (opcional) recrea el gráfico a partir del CSV
+python collector.py          # generates/updates data/feeds.csv
+python dashboards/preview.py # (optional) recreates the chart from the CSV
 ```
 
-## 📁 Estructura
+## Structure
 ```
 Threat-Feeds-Collector/
 ├── collector.py
