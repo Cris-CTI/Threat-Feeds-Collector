@@ -1,3 +1,6 @@
+<img width="980" height="382" alt="intel feeds collector" src="https://github.com/user-attachments/assets/0207ee18-9be3-4e23-abc4-08a0176b3562" />
+
+
 # 1. Threat Intel Feeds Collector
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue?logo=python)
