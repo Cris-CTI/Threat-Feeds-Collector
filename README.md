@@ -7,6 +7,8 @@
 **Threat Intel Feeds Collector** is an educational project that collects, normalizes, and stores Indicators of Compromise (**IoCs**) such as IP addresses, domains, and hashes.  
 The processed data is stored in CSV format and can be analyzed and visualized with **Power BI**.
 
+*This project is intended for educational and training purposes in Cyber Threat Intelligence (CTI)*
+
 ---
 
 ## 2. Features
@@ -21,7 +23,7 @@ The processed data is stored in CSV format and can be analyzed and visualized wi
   - Updates and maintains `data/feeds.csv` as a historical dataset
   - Metadata included: `run_id`, `collected_at`, `source`, `severity`, `confidence`, `tags`
 - 2.4 **Visualization**
-  - Interactive **Power BI dashboard** showing:
+  - Interactive **Power BI dashboard**. Designed to help analysts quickly identify hotspots, high severity IoCs, and source reliability. Showing:
     - Severity distribution (low / medium / high)
     - Trends by date (`collected_at`)
     - IoC type distribution (`ip`, `domain`, `hash`)
@@ -33,7 +35,7 @@ The processed data is stored in CSV format and can be analyzed and visualized wi
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/yourusername/Threat-Feeds-Collector.git
+git clone https://github.com/Cris-CTI/Threat-Feeds-Collector.git
 cd Threat-Feeds-Collector
 
 # 2. Create virtual environment
@@ -48,10 +50,13 @@ pip install -r requirements.txt
 
 # 4. Run collector
 python collector.py
+[+] Starting IoC collection…
+[OK] Added X records to data/feeds.csv
+
 ```
 
 👉 The generated dataset will be stored in:
-data/feeds.csv
+data/feeds.csv and can be directly imported into Power BI
 
 ---
 
@@ -96,23 +101,25 @@ The normalized data can be explored with the included Power BI dashboard located
 ## 5. Repository Structure
 
 ```bash
-
 Threat-Feeds-Collector/
 ├── collector.py              # Main collector script
-├── dashboards/
-│   ├── preview.py            # Simple matplotlib preview 
-│   └── preview.png           # Dashboard example
+├── dashboards/               # Power BI dashboards and screenshots
+│   ├── dashboard_overview.png
+│   ├── dashboard_types_domain.png
+│   ├── dashboard_types_hash.png
+│   ├── dashboard_types_ip.png
+│   ├── dashboard_severity.png
+│   └── dashboard_tags.png
 ├── data/
 │   ├── seed_iocs.txt         # Example/fake IoCs
 │   └── feeds.csv             # Generated dataset
 ├── requirements.txt          # Python dependencies
-├── LICENSE
-└── README.md
-
+├── LICENSE                   # Project license (MIT)
+└── README.md                 # Project documentation
 
 ```
 ## 6. Example Usage
-```
+
 ### Collector run
 
 ```bash
@@ -122,37 +129,43 @@ $ python collector.py
 [OK] Added 7 records to data/feeds.csv
 [SUMMARY] By type: {'ip': 2, 'domain': 2, 'hash': 3}
 
+
 Quick analysis with Pandas
 import pandas as pd
+
+# Load dataset
 df = pd.read_csv("data/feeds.csv")
+
+# Check IoC severity distribution
 print(df["severity"].value_counts())
 
-```
-## 7. Tests
-```bash
-Unit tests are included to validate core functionality.
-
-Example of a successful run:
+# Count IoCs by type
+print(df["type"].value_counts())
 
 
 ```
-## 8. Roadmap
+## 7. Roadmap
 
-- Add integration with additional public feeds (AlienVault OTX, AbuseIPDB).
+Planned improvements and future work for this project:
 
-- Export to additional formats (JSON, Parquet).
+- **Additional threat intel feeds**  
+  Integrate new public feeds such as AlienVault OTX and AbuseIPDB to enrich the dataset.
 
-- Interactive dashboard with Streamlit for web visualization.
+- **Extended export formats**  
+  Support exporting the collected IoCs to formats beyond CSV, including JSON and Parquet.
+
+- **Web-based visualization**  
+  Develop an interactive dashboard with Streamlit to allow real-time exploration of IoCs directly from a browser.
 
 ---
 
-## 9. License
+## 8. License
 
 This project is licensed under the MIT License.
 
 ---
 
-## 10. Author
+## 9. Author
 
 Cris-CTI
 - LinkedIn -> https://www.linkedin.com/in/cristina-martinez-campos/ 
