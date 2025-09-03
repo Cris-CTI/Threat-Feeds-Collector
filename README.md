@@ -117,15 +117,16 @@ python -m pytest
 
 - Interactive dashboard with Streamlit for web visualization.
 
-```
+---
 
-```
 ## 9. License
-```
+
 This project is licensed under the MIT License.
 
-```
+---
+
 ## 10. Author
-```bash
+
 Cris-CTI
-🔗 LinkedIn · GitHub
+- LinkedIn -> https://www.linkedin.com/in/cristina-martinez-campos/ 
+- GitHub -> https://github.com/Cris-CTI
