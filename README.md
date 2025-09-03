@@ -1,4 +1,4 @@
-# 1. Threat Intel Feeds Collector
+# 🛡️ Threat Intel Feeds Collector
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue?logo=python)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?logo=powerbi)
@@ -9,18 +9,18 @@ The processed data is stored in CSV format and can be analyzed and visualized wi
 
 ---
 
-## 2. Features
+## 📌 Features
 
-- 1. **IoC Collection**
+- 🔎 **IoC Collection**
   - From seed file (`data/seed_iocs.txt`)
   - (Optional) From public threat intel feeds (`URLhaus`, `FeodoTracker`)
-- 2. **Normalization**
+- 🧹 **Normalization**
   - Automatic classification (`ip`, `domain`, `hash`)
   - Hash type detection (MD5, SHA1, SHA256)
-- 3. **Storage**
+- 🗂️ **Storage**
   - Updates and maintains `data/feeds.csv` as a historical dataset
   - Metadata included: `run_id`, `collected_at`, `source`, `severity`, `confidence`, `tags`
-- 4. **Visualization**
+- 📊 **Visualization**
   - Interactive **Power BI dashboard** showing:
     - Severity distribution (low / medium / high)
     - Trends by date (`collected_at`)
@@ -29,11 +29,11 @@ The processed data is stored in CSV format and can be analyzed and visualized wi
 
 ---
 
-## 3. Quick start
+## ⚡ Quick Start
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/Cris-CTI/Threat-Feeds-Collector.git
+git clone https://github.com/yourusername/Threat-Feeds-Collector.git
 cd Threat-Feeds-Collector
 
 # 2. Create virtual environment
@@ -48,89 +48,66 @@ pip install -r requirements.txt
 
 # 4. Run collector
 python collector.py
-
-* The generated dataset will be stored in:
+👉 The generated dataset will be stored in:
 data/feeds.csv
 
----
-
-### 4. Dashboard
-```markdown
-## Power BI Dashboard
-
-The normalized data can be explored with the included **Power BI dashboard** located in the `dashboards/` folder.
+📊 Power BI Dashboard
+The normalized data can be explored with the included Power BI dashboard located in the dashboards/ folder.
 
 Example:
 
-![Dashboard Preview](dashboards/preview.png)
 
-> 💡 Replace `preview.png` with real **screenshots of your Power BI dashboard** (e.g. `dashboard1.png`, `dashboard2.png`).  
-> This is what gives the repository a truly **professional look**.
 
----
+💡 Replace preview.png with real screenshots of your Power BI dashboard (e.g. dashboard1.png, dashboard2.png).
+This is what gives the repository a truly professional look.
 
-## 5. Repository structure
-
+📂 Repository Structure
+bash
+Copiar código
 Threat-Feeds-Collector/
-├── collector.py # Main collector script
+├── collector.py              # Main collector script
 ├── dashboards/
-│ ├── preview.py # Simple matplotlib preview (optional)
-│ └── preview.png # Dashboard example
+│   ├── preview.py            # Simple matplotlib preview (optional)
+│   └── preview.png           # Dashboard example
 ├── data/
-│ ├── seed_iocs.txt # Example/fake IoCs
-│ └── feeds.csv # Generated dataset
-├── requirements.txt # Python dependencies
+│   ├── seed_iocs.txt         # Example/fake IoCs
+│   └── feeds.csv             # Generated dataset
+├── requirements.txt          # Python dependencies
 ├── LICENSE
 └── README.md
-
----
-
-## 6. Example usage
-
-### Collector run
-```bash
+✅ Example Usage
+Collector run
+bash
+Copiar código
 $ python collector.py
 [+] Starting IoC collection…
 [INFO] Remote feeds disabled (DISABLE_REMOTE_FEEDS=1)
 [OK] Added 7 records to data/feeds.csv
 [SUMMARY] By type: {'ip': 2, 'domain': 2, 'hash': 3}
-
 Quick analysis with Pandas
+python
+Copiar código
 import pandas as pd
 df = pd.read_csv("data/feeds.csv")
 print(df["severity"].value_counts())
-
----
-
-### 7. Tests
-
-```bash
+🧪 Tests
+bash
+Copiar código
 python -m pytest
+✔️ All unit tests passing:
 
-✔ - All unit tests passing:
+🚀 Roadmap
+ Add integration with additional public feeds (AlienVault OTX, AbuseIPDB).
 
----
+ Export to additional formats (JSON, Parquet).
 
-### 8. Roadmap
+ Interactive dashboard with Streamlit for web visualization.
 
-```bash
-- [ ] Add integration with additional public feeds (AlienVault OTX, AbuseIPDB).
-- [ ] Export to additional formats (JSON, Parquet).
-- [ ] Interactive dashboard with Streamlit for web visualization.
+📜 License
+This project is licensed under the MIT License.
 
----
-
-## 9. License
-
-```bash
-
-This project is licensed under the [MIT License](LICENSE).
+👤 Author
+Cris-CTI
+🔗 LinkedIn · GitHub
 
 ---
-
-## 10. Author
-
-```bash
-
-**Cris-CTI**  
-🔗 [LinkedIn](https://linkedin.com/in/cristina-martinez-campos/) · [GitHub](https://github.com/Cris-CTI)
