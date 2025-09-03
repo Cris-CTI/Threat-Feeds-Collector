@@ -55,7 +55,6 @@ data/feeds.csv
 
 ---
 
-```markdown
 ## 4. Power BI Dashboard
 
 The normalized data can be explored with the included Power BI dashboard located in the dashboards/ folder.
@@ -86,9 +85,9 @@ Threat-Feeds-Collector/
 └── README.md
 
 ---
-
+```
 ## 6. Example Usage
-
+```
 ### Collector run
 
 ```bash
@@ -105,13 +104,13 @@ print(df["severity"].value_counts())
 
 
 ---
-
+```
 ## 7. Tests
 ```bash
 python -m pytest
 ✔️ All unit tests passing:
 ---
-
+```
 ## 8. Roadmap
 ```bash
 
@@ -122,13 +121,13 @@ python -m pytest
 - Interactive dashboard with Streamlit for web visualization.
 
 ---
-
+```
 ## 9. License
 ```bash
 
 This project is licensed under the MIT License.
 ---
-
+```
 ## 10. Author
 ```bash
 Cris-CTI
