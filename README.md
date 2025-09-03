@@ -110,7 +110,6 @@ python -m pytest
 
 ```
 ## 8. Roadmap
-```bash
 
 - Add integration with additional public feeds (AlienVault OTX, AbuseIPDB).
 
@@ -118,10 +117,10 @@ python -m pytest
 
 - Interactive dashboard with Streamlit for web visualization.
 
+---
 
 ```
 ## 9. License
-```bash
 
 This project is licensed under the MIT License.
 
