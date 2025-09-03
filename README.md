@@ -48,18 +48,22 @@ pip install -r requirements.txt
 
 # 4. Run collector
 python collector.py
+```
+
 👉 The generated dataset will be stored in:
 data/feeds.csv
+
+---
 
 📊 Power BI Dashboard
 The normalized data can be explored with the included Power BI dashboard located in the dashboards/ folder.
 
 Example:
 
-
-
 💡 Replace preview.png with real screenshots of your Power BI dashboard (e.g. dashboard1.png, dashboard2.png).
 This is what gives the repository a truly professional look.
+
+---
 
 📂 Repository Structure
 bash
@@ -90,22 +94,27 @@ Copiar código
 import pandas as pd
 df = pd.read_csv("data/feeds.csv")
 print(df["severity"].value_counts())
+---
+
 🧪 Tests
 bash
 Copiar código
 python -m pytest
 ✔️ All unit tests passing:
+---
 
 🚀 Roadmap
- Add integration with additional public feeds (AlienVault OTX, AbuseIPDB).
+- Add integration with additional public feeds (AlienVault OTX, AbuseIPDB).
 
- Export to additional formats (JSON, Parquet).
+- Export to additional formats (JSON, Parquet).
 
- Interactive dashboard with Streamlit for web visualization.
+- Interactive dashboard with Streamlit for web visualization.
+
+---
 
 📜 License
 This project is licensed under the MIT License.
-
+---
 👤 Author
 Cris-CTI
 🔗 LinkedIn · GitHub
