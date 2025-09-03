@@ -55,15 +55,16 @@ data/feeds.csv
 
 ---
 
+```markdown
 ## 4. Power BI Dashboard
-
-```bash
 
 The normalized data can be explored with the included Power BI dashboard located in the dashboards/ folder.
 
 Example:
 
-💡 Replace preview.png with real screenshots of your Power BI dashboard (e.g. dashboard1.png, dashboard2.png).
+![Dashboard Preview](dashboards/preview.png)
+
+💡 Replace `preview.png` with real screenshots of your Power BI dashboard (e.g. `dashboard1.png`, `dashboard2.png`).  
 This is what gives the repository a truly professional look.
 
 ---
@@ -84,31 +85,34 @@ Threat-Feeds-Collector/
 ├── LICENSE
 └── README.md
 
-✅ Example Usage
-Collector run
-bash
-Copiar código
+---
+
+## 6. Example Usage
+
+### Collector run
+
+```bash
 $ python collector.py
 [+] Starting IoC collection…
 [INFO] Remote feeds disabled (DISABLE_REMOTE_FEEDS=1)
 [OK] Added 7 records to data/feeds.csv
 [SUMMARY] By type: {'ip': 2, 'domain': 2, 'hash': 3}
+
 Quick analysis with Pandas
-python
-Copiar código
 import pandas as pd
 df = pd.read_csv("data/feeds.csv")
 print(df["severity"].value_counts())
 
+
 ---
 
-## 6. Tests
+## 7. Tests
 ```bash
 python -m pytest
 ✔️ All unit tests passing:
 ---
 
-## 7. Roadmap
+## 8. Roadmap
 ```bash
 
 - Add integration with additional public feeds (AlienVault OTX, AbuseIPDB).
@@ -119,13 +123,13 @@ python -m pytest
 
 ---
 
-## 8. License
+## 9. License
 ```bash
 
 This project is licensed under the MIT License.
 ---
 
-## 9. Author
+## 10. Author
 ```bash
 Cris-CTI
 🔗 LinkedIn · GitHub
