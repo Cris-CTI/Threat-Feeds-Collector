@@ -9,18 +9,18 @@ The processed data is stored in CSV format and can be analyzed and visualized wi
 
 ---
 
-## 📌2. Features
+## 2. Features
 
-- 🔎 **IoC Collection**
+- 2.1 **IoC Collection**
   - From seed file (`data/seed_iocs.txt`)
   - (Optional) From public threat intel feeds (`URLhaus`, `FeodoTracker`)
-- 🧹 **Normalization**
+- 2.2 **Normalization**
   - Automatic classification (`ip`, `domain`, `hash`)
   - Hash type detection (MD5, SHA1, SHA256)
-- 🗂️ **Storage**
+- 2.3 **Storage**
   - Updates and maintains `data/feeds.csv` as a historical dataset
   - Metadata included: `run_id`, `collected_at`, `source`, `severity`, `confidence`, `tags`
-- 📊 **Visualization**
+- 2.4 **Visualization**
   - Interactive **Power BI dashboard** showing:
     - Severity distribution (low / medium / high)
     - Trends by date (`collected_at`)
@@ -55,7 +55,10 @@ data/feeds.csv
 
 ---
 
-4. Power BI Dashboard
+## 4. Power BI Dashboard
+
+```bash
+
 The normalized data can be explored with the included Power BI dashboard located in the dashboards/ folder.
 
 Example:
@@ -65,8 +68,10 @@ This is what gives the repository a truly professional look.
 
 ---
 
-5. Repository Structure
-bash
+## 5. Repository Structure
+
+```bash
+
 Threat-Feeds-Collector/
 ├── collector.py              # Main collector script
 ├── dashboards/
@@ -98,13 +103,14 @@ print(df["severity"].value_counts())
 ---
 
 ## 6. Tests
-bash
-Copiar código
+```bash
 python -m pytest
 ✔️ All unit tests passing:
 ---
 
 ## 7. Roadmap
+```bash
+
 - Add integration with additional public feeds (AlienVault OTX, AbuseIPDB).
 
 - Export to additional formats (JSON, Parquet).
@@ -114,10 +120,13 @@ python -m pytest
 ---
 
 ## 8. License
+```bash
+
 This project is licensed under the MIT License.
 ---
 
 ## 9. Author
+```bash
 Cris-CTI
 🔗 LinkedIn · GitHub
 
