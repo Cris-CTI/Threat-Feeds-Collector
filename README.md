@@ -59,12 +59,37 @@ data/feeds.csv
 
 The normalized data can be explored with the included Power BI dashboard located in the dashboards/ folder.
 
-Example:
+#### - 4.1 Overview
+- Full overview of the Power BI dashboard, showing all charts together. This view allows a quick understanding of the collected IoCs, their types, severities, and overall distribution at a glance.
 
-![Dashboard Preview](dashboards/preview.png)
+<img width="1155" height="655" alt="dashboard_overview" src="https://github.com/user-attachments/assets/581dfb85-7362-4f8a-a735-a1996063dce2" />
 
-💡 Replace `preview.png` with real screenshots of your Power BI dashboard (e.g. `dashboard1.png`, `dashboard2.png`).  
-This is what gives the repository a truly professional look.
+#### - 4.2 IoC Type Distribution (IP, Domain & Hash)
+- Distribution of collected IoCs by type. It shows the proportion of IP addresses, domain names, and hashes, helping to identify which type of indicators are most common in the dataset.
+  
+*(Domain)*
+
+<img width="600" alt="dashboard_types_domain" src="https://github.com/user-attachments/assets/46641608-429b-4143-b1d9-7914ddb2944f" />
+
+*(Hash)*
+
+<img width="600" alt="dashboard_types_hash" src="https://github.com/user-attachments/assets/6568193e-ff16-4189-84f5-672d5fa88d44" />
+
+
+*(IP)*
+
+<img width="600" alt="dashboard_types_ip" src="https://github.com/user-attachments/assets/90791de2-9ea9-43b2-a11c-81b422f03f50" />
+
+#### - 4.3 Severity Distribution (Low / Medium / High)
+- Counts of IoCs grouped by severity level. This chart highlights which indicators pose the highest risk, helping prioritize monitoring or response actions.
+
+<img width="600" alt="dashboard_severity" src="https://github.com/user-attachments/assets/4fc84782-00e2-4a9d-aca8-f831c6fd023b" />
+
+#### - 4.4 IoC Distribution by Source / Tags
+- Shows the number of IoCs grouped by their source (e.g., seed file, FeodoTracker) and categorized by threat tags (e.g., botnet-c2).  
+- This visualization is useful to understand both **where the indicators come from** and **what type of threats they represent**.
+
+<img width="600" alt="dashboard_tags" src="https://github.com/user-attachments/assets/16ba9cb4-669e-4d25-8dbd-1ac9a137869d" />
 
 ---
 
@@ -75,7 +100,7 @@ This is what gives the repository a truly professional look.
 Threat-Feeds-Collector/
 ├── collector.py              # Main collector script
 ├── dashboards/
-│   ├── preview.py            # Simple matplotlib preview (optional)
+│   ├── preview.py            # Simple matplotlib preview 
 │   └── preview.png           # Dashboard example
 ├── data/
 │   ├── seed_iocs.txt         # Example/fake IoCs
@@ -105,8 +130,10 @@ print(df["severity"].value_counts())
 ```
 ## 7. Tests
 ```bash
-python -m pytest
-✔️ All unit tests passing:
+Unit tests are included to validate core functionality.
+
+Example of a successful run:
+
 
 ```
 ## 8. Roadmap
