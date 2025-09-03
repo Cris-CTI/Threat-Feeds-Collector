@@ -1,4 +1,4 @@
-# 🛡️ Threat Intel Feeds Collector
+# 1. Threat Intel Feeds Collector
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue?logo=python)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?logo=powerbi)
@@ -9,7 +9,7 @@ The processed data is stored in CSV format and can be analyzed and visualized wi
 
 ---
 
-## 📌 Features
+## 📌2. Features
 
 - 🔎 **IoC Collection**
   - From seed file (`data/seed_iocs.txt`)
@@ -29,7 +29,7 @@ The processed data is stored in CSV format and can be analyzed and visualized wi
 
 ---
 
-## ⚡ Quick Start
+## 3. Quick Start
 
 ```bash
 # 1. Clone repository
@@ -55,7 +55,7 @@ data/feeds.csv
 
 ---
 
-📊 Power BI Dashboard
+4. Power BI Dashboard
 The normalized data can be explored with the included Power BI dashboard located in the dashboards/ folder.
 
 Example:
@@ -65,9 +65,8 @@ This is what gives the repository a truly professional look.
 
 ---
 
-📂 Repository Structure
+5. Repository Structure
 bash
-Copiar código
 Threat-Feeds-Collector/
 ├── collector.py              # Main collector script
 ├── dashboards/
@@ -79,6 +78,7 @@ Threat-Feeds-Collector/
 ├── requirements.txt          # Python dependencies
 ├── LICENSE
 └── README.md
+
 ✅ Example Usage
 Collector run
 bash
@@ -94,16 +94,17 @@ Copiar código
 import pandas as pd
 df = pd.read_csv("data/feeds.csv")
 print(df["severity"].value_counts())
+
 ---
 
-🧪 Tests
+## 6. Tests
 bash
 Copiar código
 python -m pytest
 ✔️ All unit tests passing:
 ---
 
-🚀 Roadmap
+## 7. Roadmap
 - Add integration with additional public feeds (AlienVault OTX, AbuseIPDB).
 
 - Export to additional formats (JSON, Parquet).
@@ -112,10 +113,11 @@ python -m pytest
 
 ---
 
-📜 License
+## 8. License
 This project is licensed under the MIT License.
 ---
-👤 Author
+
+## 9. Author
 Cris-CTI
 🔗 LinkedIn · GitHub
 
