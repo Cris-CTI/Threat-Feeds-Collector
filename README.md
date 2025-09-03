@@ -71,8 +71,6 @@ Example:
 
 ## 5. Repository structure
 
-```bash
-## Repository Structure
 Threat-Feeds-Collector/
 ├── collector.py # Main collector script
 ├── dashboards/
@@ -102,7 +100,6 @@ import pandas as pd
 df = pd.read_csv("data/feeds.csv")
 print(df["severity"].value_counts())
 
-
 ---
 
 ### 7. Tests
@@ -123,7 +120,7 @@ python -m pytest
 
 ---
 
-### 9. License
+## 9. License
 
 ```bash
 
@@ -131,7 +128,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-### 10. Author
+## 10. Author
 
 ```bash
 
