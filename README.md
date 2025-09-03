@@ -84,7 +84,7 @@ Threat-Feeds-Collector/
 ├── LICENSE
 └── README.md
 
----
+
 ```
 ## 6. Example Usage
 ```
@@ -102,14 +102,12 @@ import pandas as pd
 df = pd.read_csv("data/feeds.csv")
 print(df["severity"].value_counts())
 
-
----
 ```
 ## 7. Tests
 ```bash
 python -m pytest
 ✔️ All unit tests passing:
----
+
 ```
 ## 8. Roadmap
 ```bash
@@ -120,17 +118,15 @@ python -m pytest
 
 - Interactive dashboard with Streamlit for web visualization.
 
----
+
 ```
 ## 9. License
 ```bash
 
 This project is licensed under the MIT License.
----
+
 ```
 ## 10. Author
 ```bash
 Cris-CTI
 🔗 LinkedIn · GitHub
-
----
